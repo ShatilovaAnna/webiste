@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Нумеролог Шатилова Анна</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="/static/sertificate.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{url_for('.static', filename='sertificate.css')}}" />
+	</head>
+	<body>
+		<header class="wrapper">
+			<nav class="navMenu">
+				<div class="nav_links">
+					<a href="home">Анна Шатилова</a>
+					<a href="aboutme" class="obo-mne">Консультация</a>
+
+					<a href="sertificate">Сертификаты</a>
+					<a href="matrix" target="_blank">Рассчитать матрицу</a>
+				</div>
+
+				<div class="social-media-icons">
+					<a href="https://vk.com/id838686053">
+						<!-- <img src="/static/vk.png" class="vk-icon" /> -->
+						<img src="{{url_for('static', filename='vk.png')}}" />
+					</a>
+					<a href="">
+						<!-- <img src="/static/telegram.png" class="telegram-icon" /> -->
+						<img src="{{url_for('static', filename='telegram.png')}}" />
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="wrapper">
+			<div class="main">
+				<div class="main-info">
+					<div class="aboutme">
+						<p>Сертификаты</p>
+						<h1>Здесь можно посмотреть мои сертификаты</h1>
+					</div>
+
+					<div class="center">
+						<button class="fancy">
+							<span class="top-key"></span>
+							<a href="/templates/matrix.html" target="_blank" class=""
+								>Рассчитать матрицу</a
+							>
+							<span class="bottom-key-1"></span>
+							<span class="bottom-key-2"></span>
+						</button>
+					</div>
+				</div>
+				<div class="container_photo">
+					<!-- <img src="photo/sertificate1.png" class="photo1" /> -->
+					<img
+						src="{{ url_for('static', filename='sertificate1.png') }}"
+						class="photo1" />
+					<!-- <img src="photo/sertificate2.jpg" class="photo2" /> -->
+					<img
+						class="photo2"
+						src="{{ url_for('static', filename='sertificate2.jpg') }}" />
+				</div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+		<script src="/scripts.js"></script>
+	</body>
+</html>

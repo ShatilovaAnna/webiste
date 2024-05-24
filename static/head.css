@@ -1,0 +1,71 @@
+/*header {
+	position: absolute;
+	width: 1600px;
+	left: 50%;
+	top: 2%;
+	transform: translateX(-50%);
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 1fr 100px 150px 200px 250px;
+}
+header h4 {
+	font-size: 1.2rem;
+	color: var(--white);
+	letter-spacing: 1px;
+}
+header a {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	transition: 0.3s;
+}
+header a:hover {
+	color: var(--white);
+	cursor: pointer;
+}*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.navMenu {
+    position: absolute;
+	width: 100px;
+    max-width: 500px;
+    left: 17%;
+	top: 2%;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 300px 120px 180px 240px 300px;
+    padding-right: 1000px; /* Поля */
+    padding-left: 200px;
+   /* border: 2px solid #E81E25;  Параметры рамки */
+}
+
+.navMenu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navMenu a:hover {
+  color: #ff0000;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #ff0000;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+
+
+

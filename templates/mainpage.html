@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Нумеролог Шатилова Анна</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{url_for('.static', filename='styles.css')}}" />
+	</head>
+	<body>
+		<header class="wrapper">
+			<nav class="navMenu">
+				<div class="nav_links">
+					<a href="home">Анна Шатилова</a>
+					<a href="aboutme" class="obo-mne">Консультация</a>
+
+					<a href="sertificate">Сертификаты</a>
+					<a href="matrix" target="_blank">Рассчитать матрицу</a>
+				</div>
+
+				<div class="social-media-icons">
+					<a href="https://vk.com/id838686053">
+						<!-- <img src="/static/vk.png" class="vk-icon" /> -->
+						<img src="{{url_for('static', filename='vk.png')}}" />
+					</a>
+					<a href="">
+						<!-- <img src="/static/telegram.png" class="telegram-icon" /> -->
+						<img src="{{url_for('static', filename='telegram.png')}}" />
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="wrapper">
+			<div class="main">
+				<div class="main-info">
+					<div class="aboutme">
+						<h2>
+							Нумеролог, <br />
+							специалист по <br />
+							психоанализу личности<br />Шатилова Анна
+						</h2>
+					</div>
+
+					<div class="can_help">
+						<h3>ПОМОГУ ВАМ:</h3>
+						<div class="can_help-info">
+							<p>
+								- найти свое призвание <br />
+								- понять как зарабатывать больше денег <br />
+								- обрести уверенность в себе <br />
+								- решить бизнес-вопросы <br />
+								- узнать как удачно жениться/выйти замуж <br />
+								- понять где брать энергию <br />
+								- раскрыть свою женственность
+							</p>
+
+							<p>
+								- узнать совместимость с партнером <br />
+								(в том числе с потенциальным) <br />
+								- найти подход к своему ребенку <br />
+								- выбрать подходящую профессию подростку <br />
+								- наладить отношения с близкими <br />
+								- вернуть вкус жизни <br />
+								- раскрыть свою женственность <br />
+							</p>
+						</div>
+
+						<h3>СТОИМОСТЬ КОНСУЛЬТАЦИИ - 4900 РУБ</h3>
+					</div>
+
+					<div class="buttons_cont">
+						<button class="fancy">
+							<span class="top-key"></span>
+							<a href="https://wa.me/79642773170" target="_blank"
+								>Записаться на консультацию</a
+							>
+							<span class="bottom-key-1"></span>
+							<span class="bottom-key-2"></span>
+						</button>
+
+						<button class="fancy">
+							<span class="top-key"></span>
+							<a href="aboutme" target="_blank">Узнать подробнее</a>
+							<span class="bottom-key-1"></span>
+							<span class="bottom-key-2"></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="imgs">
+					<!-- <img src="photo/woman.png" class="author_img" alt="" /> -->
+					<img
+						class="author_img"
+						src="{{ url_for('static', filename='woman.png') }}" />
+					<!--img class="author_img" src="{{ url_for('static', filename='woman.png') }}" /!-->
+					<!-- <img src="photo/numbers.png" class="numbers_img" alt="" /> -->
+					<img
+						class="numbers_img"
+						src="{{ url_for('static', filename='numbers.png') }}" />
+					<!--img class="numbers_img" src="{{ url_for('static', filename='numbers.png') }}" /!-->
+				</div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+		<script src="/scripts.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var toggleButton = document.querySelector('.menu-toggle');
+				var menuItems = document.querySelector('.menu-items');
+
+				console.log('Toggle button:', toggleButton);
+				console.log('Menu items:', menuItems);
+
+				toggleButton.addEventListener('click', function () {
+					console.log('Toggle button clicked!');
+					menuItems.classList.toggle('show');
+				});
+			});
+		</script>
+	</body>
+</html>

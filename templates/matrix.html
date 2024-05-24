@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<title>
+			Расшифровка матрицы &#8212; Школа неНумерологии Ольги Перцевой
+		</title>
+		<meta
+			name="description"
+			content="Расшифровка матрицы по методу Ольги Перцевой" />
+
+		<link
+			rel="stylesheet"
+			id="wp-postratings-css"
+			href="https://nenumerolog.ru/wp-content/plugins/wp-postratings/css/postratings-css.css?ver=1.91.1"
+			type="text/css"
+			media="all" />
+		<!--link rel='stylesheet' id='fonts-css' href='https://fonts.googleapis.com/css2?family=Montserrat%3Awght%40400%3B500%3B600%3B700&#038;display=swap&#038;subset=cyrillic&#038;ver=6.4.3' type='text/css' media='all' /!-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet" />
+
+		<link rel="stylesheet" type="text/css" href="/static/matrix2.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{url_for('.static', filename='matrix2.css')}}" />
+		<script
+			type="text/javascript"
+			src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"
+			id="jquery-js"></script>
+	</head>
+	<body>
+		<header class="wrapper">
+			<nav class="navMenu">
+				<div class="nav_links">
+					<a href="home">Анна Шатилова</a>
+					<a href="aboutme" class="obo-mne">Консультация</a>
+
+					<a href="sertificate">Сертификаты</a>
+					<a href="matrix" target="_blank">Рассчитать матрицу</a>
+				</div>
+
+				<div class="social-media-icons">
+					<a href="https://vk.com/id838686053">
+						<!-- <img src="/static/vk.png" class="vk-icon" /> -->
+						<img src="{{url_for('static', filename='vk.png')}}" />
+					</a>
+					<a href="">
+						<!-- <img src="/static/telegram.png" class="telegram-icon" /> -->
+						<img src="{{url_for('static', filename='telegram.png')}}" />
+					</a>
+				</div>
+			</nav>
+		</header>
+		<div class="page-wrapper">
+			<main class="wrapper">
+				<div class="page-wrapper-content">
+					<div class="navbar-after"></div>
+
+					<section class="article-content wp-editor">
+						<div class="decrypt">
+							<div class="decrypt__left">
+								<div class="decrypt_div_h1">
+									<h1>введите дату рождения</h1>
+								</div>
+								<form id="dateForm">
+									<div class="datepicker">
+										<input
+											type="text"
+											id="datepicker"
+											placeholder="01.01.0000"
+											class="js-matrix-birthdate"
+											disabled
+											name="date"
+											pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"
+											value=""
+											required />
+									</div>
+									<div class="decrypt__menu decrypt__menu--short">
+										<button
+											type="submit"
+											class="button primary"
+											style="flex-grow: 1">
+											рассчитать
+										</button>
+									</div>
+								</form>
+								<div class="product_div_fio_price"></div>
+							</div>
+							<div class="forPromocode__matrix">
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">
+											Доп. числа
+										</div>
+										<div
+											class="forPromocode__matrixElementValue number n-additional">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">
+											Число судьбы
+										</div>
+										<div
+											class="forPromocode__matrixElementValue number n-destiny">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">
+											Темперамент
+										</div>
+										<div class="forPromocode__matrixElementValue number n-9">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Характер</div>
+										<div class="forPromocode__matrixElementValue number n-0">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Здоровье</div>
+										<div class="forPromocode__matrixElementValue number n-3">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Удача</div>
+										<div class="forPromocode__matrixElementValue number n-6">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Цель</div>
+										<div class="forPromocode__matrixElementValue number n-12">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Энергия</div>
+										<div class="forPromocode__matrixElementValue number n-1">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Логика</div>
+										<div class="forPromocode__matrixElementValue number n-4">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Долг</div>
+										<div class="forPromocode__matrixElementValue number n-7">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Семья</div>
+										<div class="forPromocode__matrixElementValue number n-11">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Интерес</div>
+										<div class="forPromocode__matrixElementValue number n-2">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Труд</div>
+										<div class="forPromocode__matrixElementValue number n-5">
+											–
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Память</div>
+										<div class="forPromocode__matrixElementValue number n-8">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Привычки</div>
+										<div class="forPromocode__matrixElementValue number n-13">
+											—
+										</div>
+									</div>
+								</div>
+								<div class="forPromocode__matrixElement">
+									<div class="forPromocode__matrixElementWrapper" tabindex="1">
+										<div class="forPromocode__matrixElementLabel">Быт</div>
+										<div class="forPromocode__matrixElementValue number n-10">
+											—
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<!-- / page-wrapper-content -->
+			</main>
+		</div>
+		<!-- /page-wrapper -->
+
+		<script>
+			// Болкируем окно ввода, пока страница не загрузится
+			$(document).ready(function () {
+				$('#datepicker').removeAttr('disabled');
+			});
+
+			document.addEventListener('DOMContentLoaded', function () {
+				$('body').on('submit', '#dateForm', function () {
+					let date = $('.js-matrix-birthdate').val();
+
+					calculate_matrix(
+						$('.forPromocode__matrix'),
+						date,
+						function () {
+							let url_permalink = 'https://nenumerolog.ru/decryption/?';
+							let url_base =
+								'ch_sud=' +
+								$('.n-destiny').text() +
+								'&check=' +
+								date +
+								'&date=' +
+								date +
+								'&harakter=' +
+								$('.n-0').text() +
+								'&zdorvie=' +
+								$('.n-3').text() +
+								'&udacha=' +
+								$('.n-6').text() +
+								'&energiya=' +
+								$('.n-1').text() +
+								'&logika=' +
+								$('.n-4').text() +
+								'&dolg=' +
+								$('.n-7').text() +
+								'&interes=' +
+								$('.n-2').text() +
+								'&trud=' +
+								$('.n-5').text() +
+								'&pamat=' +
+								$('.n-8').text() +
+								'&temperament=' +
+								$('.n-9').text() +
+								'&cel=' +
+								$('.n-12').text() +
+								'&semiya=' +
+								$('.n-11').text() +
+								'&privichki=' +
+								$('.n-13').text() +
+								'&bit=' +
+								$('.n-10').text() +
+								'&additional=' +
+								encodeURIComponent($('.n-additional').text());
+
+							let url = url_permalink + url_base;
+							let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
+
+							console.log(url);
+							console.log(url_pdf);
+
+							document.url_pdf = url_pdf;
+
+							$.ajax({
+								type: 'GET',
+								url: url,
+								dataType: 'html',
+								success: function (data) {
+									if (data.indexOf('http') === 0) {
+										location.href = data;
+									} else {
+										$('.show_hidden_form').slideDown();
+										var dateList = $('.js-matrix-birthdate').val().split('.');
+										var dateString =
+											dateList[2] + '-' + dateList[1] + '-' + dateList[0];
+										$('input[name="birth_date"]').val(dateString);
+										$('.decrypt__left').append(data);
+									}
+								},
+							});
+						},
+						true
+					);
+
+					return false;
+				});
+
+				$('.show_hidden_form').click(function () {
+					$('.hidden__form').slideDown();
+					var dateList = $('.js-matrix-birthdate').val().split('.');
+					var dateString = dateList[2] + '-' + dateList[1] + '-' + dateList[0];
+					$('input[name="birth_date"]').val(dateString);
+
+					$(this).slideUp();
+					return false;
+				});
+
+				Fluxury.do(function () {
+					date_autocorrect('.js-matrix-birthdate');
+
+					// Шер попап
+
+					$('.js-matrix-share').on('click', function () {
+						var link =
+							'https://nenumerolog.ru' +
+							'/?date=' +
+							$('.js-matrix-birthdate').val();
+
+						$('.js-matrix-code').empty();
+						new QRCode($('.js-matrix-code')[0], link);
+
+						$('.js-matrix-link').attr('href', link).text(link);
+
+						$('.js-matrix-share-popup').Popup();
+
+						return false;
+					});
+					// Копирование ссылки
+
+					$('.js-matrix-share-popup').on(
+						'click',
+						'.js-matrix-copy-link',
+						function () {
+							const el = document.createElement('textarea');
+							el.value = $('.js-matrix-link').attr('href');
+							el.setAttribute('readonly', '');
+							el.style.position = 'absolute';
+							el.style.left = '0';
+							el.style.textTransform = 'lowercase';
+							document.body.appendChild(el);
+							el.select();
+							document.execCommand('copy');
+							document.body.removeChild(el);
+
+							$(this).text('Скопировано').addClass('simple very');
+
+							return false;
+						}
+					);
+				});
+
+				let date = $('.js-matrix-birthdate').val();
+				if (date) {
+					calculate_matrix(
+						$('.forPromocode__matrix'),
+						date,
+						function () {
+							let url_permalink = 'https://nenumerolog.ru/decryption/?';
+							let url_base =
+								'ch_sud=' +
+								$('.n-destiny').text() +
+								'&date=' +
+								date +
+								'&harakter=' +
+								$('.n-0').text() +
+								'&zdorvie=' +
+								$('.n-3').text() +
+								'&udacha=' +
+								$('.n-6').text() +
+								'&energiya=' +
+								$('.n-1').text() +
+								'&logika=' +
+								$('.n-4').text() +
+								'&dolg=' +
+								$('.n-7').text() +
+								'&interes=' +
+								$('.n-2').text() +
+								'&trud=' +
+								$('.n-5').text() +
+								'&pamat=' +
+								$('.n-8').text() +
+								'&temperament=' +
+								$('.n-9').text() +
+								'&cel=' +
+								$('.n-12').text() +
+								'&semiya=' +
+								$('.n-11').text() +
+								'&privichki=' +
+								$('.n-13').text() +
+								'&bit=' +
+								$('.n-10').text() +
+								'&additional=' +
+								encodeURIComponent($('.n-additional').text());
+
+							let url = url_permalink + url_base;
+							let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
+
+							console.log(url);
+							console.log(url_pdf);
+
+							document.url_pdf = url_pdf;
+
+							$.ajax({
+								type: 'GET',
+								url: url,
+								dataType: 'html',
+								success: function (data) {
+									$('.decrypt__left').append(data);
+								},
+							});
+						},
+						true
+					);
+				}
+			});
+		</script>
+
+		<script
+			type="text/javascript"
+			src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js?ver=1.0.344"
+			id="jquery-mask-js"></script>
+		<script
+			type="text/javascript"
+			src="https://nenumerolog.ru/wp-content/themes/fluxury/assets/js/matrix_new_anti_cash_01.js?ver=1.0.344"
+			id="matrix-js"></script>
+		<script
+			type="text/javascript"
+			src="https://nenumerolog.ru/wp-content/themes/fluxury/assets/js/tracking.js?ver=1.0.344"
+			id="tracking-js"></script>
+		<script
+			type="text/javascript"
+			src="https://nenumerolog.ru/wp-content/themes/fluxury/assets/js/fluxury.js?ver=1.0.344"
+			id="fluxury-framework-js"></script>
+	</body>
+</html>
