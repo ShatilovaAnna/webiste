@@ -16,6 +16,10 @@ body {
 	margin: 0 auto;
 }
 
+meta[content] {
+	display: none;
+}
+
 .page-wrapper-content {
 	margin-top: 30px;
 }
