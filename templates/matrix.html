@@ -257,70 +257,71 @@
 						$('.forPromocode__matrix'),
 						date,
 						function () {
-							let url_permalink = 'https://nenumerolog.ru/decryption/?';
-							let url_base =
-								'ch_sud=' +
-								$('.n-destiny').text() +
-								'&check=' +
-								date +
-								'&date=' +
-								date +
-								'&harakter=' +
-								$('.n-0').text() +
-								'&zdorvie=' +
-								$('.n-3').text() +
-								'&udacha=' +
-								$('.n-6').text() +
-								'&energiya=' +
-								$('.n-1').text() +
-								'&logika=' +
-								$('.n-4').text() +
-								'&dolg=' +
-								$('.n-7').text() +
-								'&interes=' +
-								$('.n-2').text() +
-								'&trud=' +
-								$('.n-5').text() +
-								'&pamat=' +
-								$('.n-8').text() +
-								'&temperament=' +
-								$('.n-9').text() +
-								'&cel=' +
-								$('.n-12').text() +
-								'&semiya=' +
-								$('.n-11').text() +
-								'&privichki=' +
-								$('.n-13').text() +
-								'&bit=' +
-								$('.n-10').text() +
-								'&additional=' +
-								encodeURIComponent($('.n-additional').text());
+							// let url_permalink = 'https://nenumerolog.ru/decryption/?';
+							// let url_permalink = '';
+							// let url_base =
+							// 	'ch_sud=' +
+							// 	$('.n-destiny').text() +
+							// 	'&check=' +
+							// 	date +
+							// 	'&date=' +
+							// 	date +
+							// 	'&harakter=' +
+							// 	$('.n-0').text() +
+							// 	'&zdorvie=' +
+							// 	$('.n-3').text() +
+							// 	'&udacha=' +
+							// 	$('.n-6').text() +
+							// 	'&energiya=' +
+							// 	$('.n-1').text() +
+							// 	'&logika=' +
+							// 	$('.n-4').text() +
+							// 	'&dolg=' +
+							// 	$('.n-7').text() +
+							// 	'&interes=' +
+							// 	$('.n-2').text() +
+							// 	'&trud=' +
+							// 	$('.n-5').text() +
+							// 	'&pamat=' +
+							// 	$('.n-8').text() +
+							// 	'&temperament=' +
+							// 	$('.n-9').text() +
+							// 	'&cel=' +
+							// 	$('.n-12').text() +
+							// 	'&semiya=' +
+							// 	$('.n-11').text() +
+							// 	'&privichki=' +
+							// 	$('.n-13').text() +
+							// 	'&bit=' +
+							// 	$('.n-10').text() +
+							// 	'&additional=' +
+							// 	encodeURIComponent($('.n-additional').text());
 
-							let url = url_permalink + url_base;
-							let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
+							// let url = url_permalink + url_base;
+							// let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
 
-							console.log(url);
-							console.log(url_pdf);
+							// console.log(url);
+							// console.log(url_pdf);
 
-							document.url_pdf = url_pdf;
+							// document.url_pdf = url_pdf;
 
-							$.ajax({
-								type: 'GET',
-								url: url,
-								dataType: 'html',
-								success: function (data) {
-									if (data.indexOf('http') === 0) {
-										location.href = data;
-									} else {
-										$('.show_hidden_form').slideDown();
-										var dateList = $('.js-matrix-birthdate').val().split('.');
-										var dateString =
-											dateList[2] + '-' + dateList[1] + '-' + dateList[0];
-										$('input[name="birth_date"]').val(dateString);
-										$('.decrypt__left').append(data);
-									}
-								},
-							});
+							// $.ajax({
+							// 	type: 'GET',
+							// 	url: url,
+							// 	dataType: 'html',
+							// 	success: function (data) {
+							// 		if (data.indexOf('http') === 0) {
+							// 			location.href = data;
+							// 		} else {
+							// 			$('.show_hidden_form').slideDown();
+							// 			var dateList = $('.js-matrix-birthdate').val().split('.');
+							// 			var dateString =
+							// 				dateList[2] + '-' + dateList[1] + '-' + dateList[0];
+							// 			$('input[name="birth_date"]').val(dateString);
+							// 			$('.decrypt__left').append(data);
+							// 		}
+							// 	},
+							// });
 						},
 						true
 					);
@@ -338,49 +339,49 @@
 					return false;
 				});
 
-				Fluxury.do(function () {
-					date_autocorrect('.js-matrix-birthdate');
+				// Fluxury.do(function () {
+				// 	date_autocorrect('.js-matrix-birthdate');
 
-					// Шер попап
+				// 	// Шер попап
 
-					$('.js-matrix-share').on('click', function () {
-						var link =
-							'https://nenumerolog.ru' +
-							'/?date=' +
-							$('.js-matrix-birthdate').val();
+				// 	// $('.js-matrix-share').on('click', function () {
+				// 	// 	var link =
+				// 	// 		'https://nenumerolog.ru' +
+				// 	// 		'/?date=' +
+				// 	// 		$('.js-matrix-birthdate').val();
 
-						$('.js-matrix-code').empty();
-						new QRCode($('.js-matrix-code')[0], link);
+				// 	// 	$('.js-matrix-code').empty();
+				// 	// 	new QRCode($('.js-matrix-code')[0], link);
 
-						$('.js-matrix-link').attr('href', link).text(link);
+				// 	// 	$('.js-matrix-link').attr('href', link).text(link);
 
-						$('.js-matrix-share-popup').Popup();
+				// 	// 	$('.js-matrix-share-popup').Popup();
 
-						return false;
-					});
-					// Копирование ссылки
+				// 	// 	return false;
+				// 	// });
+				// 	// Копирование ссылки
 
-					$('.js-matrix-share-popup').on(
-						'click',
-						'.js-matrix-copy-link',
-						function () {
-							const el = document.createElement('textarea');
-							el.value = $('.js-matrix-link').attr('href');
-							el.setAttribute('readonly', '');
-							el.style.position = 'absolute';
-							el.style.left = '0';
-							el.style.textTransform = 'lowercase';
-							document.body.appendChild(el);
-							el.select();
-							document.execCommand('copy');
-							document.body.removeChild(el);
+				// 	$('.js-matrix-share-popup').on(
+				// 		'click',
+				// 		'.js-matrix-copy-link',
+				// 		function () {
+				// 			const el = document.createElement('textarea');
+				// 			el.value = $('.js-matrix-link').attr('href');
+				// 			el.setAttribute('readonly', '');
+				// 			el.style.position = 'absolute';
+				// 			el.style.left = '0';
+				// 			el.style.textTransform = 'lowercase';
+				// 			document.body.appendChild(el);
+				// 			el.select();
+				// 			document.execCommand('copy');
+				// 			document.body.removeChild(el);
 
-							$(this).text('Скопировано').addClass('simple very');
+				// 			$(this).text('Скопировано').addClass('simple very');
 
-							return false;
-						}
-					);
-				});
+				// 			return false;
+				// 		}
+				// 	);
+				// });
 
 				let date = $('.js-matrix-birthdate').val();
 				if (date) {
@@ -388,66 +389,66 @@
 						$('.forPromocode__matrix'),
 						date,
 						function () {
-							let url_permalink = 'https://nenumerolog.ru/decryption/?';
-							let url_base =
-								'ch_sud=' +
-								$('.n-destiny').text() +
-								'&date=' +
-								date +
-								'&harakter=' +
-								$('.n-0').text() +
-								'&zdorvie=' +
-								$('.n-3').text() +
-								'&udacha=' +
-								$('.n-6').text() +
-								'&energiya=' +
-								$('.n-1').text() +
-								'&logika=' +
-								$('.n-4').text() +
-								'&dolg=' +
-								$('.n-7').text() +
-								'&interes=' +
-								$('.n-2').text() +
-								'&trud=' +
-								$('.n-5').text() +
-								'&pamat=' +
-								$('.n-8').text() +
-								'&temperament=' +
-								$('.n-9').text() +
-								'&cel=' +
-								$('.n-12').text() +
-								'&semiya=' +
-								$('.n-11').text() +
-								'&privichki=' +
-								$('.n-13').text() +
-								'&bit=' +
-								$('.n-10').text() +
-								'&additional=' +
-								encodeURIComponent($('.n-additional').text());
+							// let url_permalink = 'https://nenumerolog.ru/decryption/?';
+							// let url_permalink = '';
+							// let url_base =
+							// 	'ch_sud=' +
+							// 	$('.n-destiny').text() +
+							// 	'&date=' +
+							// 	date +
+							// 	'&harakter=' +
+							// 	$('.n-0').text() +
+							// 	'&zdorvie=' +
+							// 	$('.n-3').text() +
+							// 	'&udacha=' +
+							// 	$('.n-6').text() +
+							// 	'&energiya=' +
+							// 	$('.n-1').text() +
+							// 	'&logika=' +
+							// 	$('.n-4').text() +
+							// 	'&dolg=' +
+							// 	$('.n-7').text() +
+							// 	'&interes=' +
+							// 	$('.n-2').text() +
+							// 	'&trud=' +
+							// 	$('.n-5').text() +
+							// 	'&pamat=' +
+							// 	$('.n-8').text() +
+							// 	'&temperament=' +
+							// 	$('.n-9').text() +
+							// 	'&cel=' +
+							// 	$('.n-12').text() +
+							// 	'&semiya=' +
+							// 	$('.n-11').text() +
+							// 	'&privichki=' +
+							// 	$('.n-13').text() +
+							// 	'&bit=' +
+							// 	$('.n-10').text() +
+							// 	'&additional=' +
+							// 	encodeURIComponent($('.n-additional').text());
 
-							let url = url_permalink + url_base;
-							let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
+							// let url = url_permalink + url_base;
+							// let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
 
-							console.log(url);
-							console.log(url_pdf);
+							// console.log(url);
+							// console.log(url_pdf);
 
-							document.url_pdf = url_pdf;
+							// document.url_pdf = url_pdf;
 
-							$.ajax({
-								type: 'GET',
-								url: url,
-								dataType: 'html',
-								success: function (data) {
-									$('.decrypt__left').append(data);
-								},
-							});
+							// $.ajax({
+							// 	type: 'GET',
+							// 	url: url,
+							// 	dataType: 'html',
+							// 	success: function (data) {
+							// 		$('.decrypt__left').append(data);
+							// 	},
+							// });
 						},
 						true
 					);
 				}
 			});
 		</script>
-
 		<script
 			type="text/javascript"
 			src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js?ver=1.0.344"
