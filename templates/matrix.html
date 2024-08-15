@@ -250,208 +250,337 @@
 					calculate_matrix(
 						$('.forPromocode__matrix'),
 						date,
-						function () {
-							// let url_permalink = 'https://nenumerolog.ru/decryption/?';
-							// let url_permalink = '';
-							// let url_base =
-							// 	'ch_sud=' +
-							// 	$('.n-destiny').text() +
-							// 	'&check=' +
-							// 	date +
-							// 	'&date=' +
-							// 	date +
-							// 	'&harakter=' +
-							// 	$('.n-0').text() +
-							// 	'&zdorvie=' +
-							// 	$('.n-3').text() +
-							// 	'&udacha=' +
-							// 	$('.n-6').text() +
-							// 	'&energiya=' +
-							// 	$('.n-1').text() +
-							// 	'&logika=' +
-							// 	$('.n-4').text() +
-							// 	'&dolg=' +
-							// 	$('.n-7').text() +
-							// 	'&interes=' +
-							// 	$('.n-2').text() +
-							// 	'&trud=' +
-							// 	$('.n-5').text() +
-							// 	'&pamat=' +
-							// 	$('.n-8').text() +
-							// 	'&temperament=' +
-							// 	$('.n-9').text() +
-							// 	'&cel=' +
-							// 	$('.n-12').text() +
-							// 	'&semiya=' +
-							// 	$('.n-11').text() +
-							// 	'&privichki=' +
-							// 	$('.n-13').text() +
-							// 	'&bit=' +
-							// 	$('.n-10').text() +
-							// 	'&additional=' +
-							// 	encodeURIComponent($('.n-additional').text());
-
-							// let url = url_permalink + url_base;
-							// let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
-
-							// console.log(url);
-							// console.log(url_pdf);
-
-							// document.url_pdf = url_pdf;
-
-							// $.ajax({
-							// 	type: 'GET',
-							// 	url: url,
-							// 	dataType: 'html',
-							// 	success: function (data) {
-							// 		if (data.indexOf('http') === 0) {
-							// 			location.href = data;
-							// 		} else {
-							// 			$('.show_hidden_form').slideDown();
-							// 			var dateList = $('.js-matrix-birthdate').val().split('.');
-							// 			var dateString =
-							// 				dateList[2] + '-' + dateList[1] + '-' + dateList[0];
-							// 			$('input[name="birth_date"]').val(dateString);
-							// 			$('.decrypt__left').append(data);
-							// 		}
-							// 	},
-							// });
-						},
+						function () {},
 						true
 					);
 
 					return false;
 				});
-
-				$('.show_hidden_form').click(function () {
-					$('.hidden__form').slideDown();
-					var dateList = $('.js-matrix-birthdate').val().split('.');
-					var dateString = dateList[2] + '-' + dateList[1] + '-' + dateList[0];
-					$('input[name="birth_date"]').val(dateString);
-
-					$(this).slideUp();
-					return false;
-				});
-
-				// Fluxury.do(function () {
-				// 	date_autocorrect('.js-matrix-birthdate');
-
-				// 	// Шер попап
-
-				// 	// $('.js-matrix-share').on('click', function () {
-				// 	// 	var link =
-				// 	// 		'https://nenumerolog.ru' +
-				// 	// 		'/?date=' +
-				// 	// 		$('.js-matrix-birthdate').val();
-
-				// 	// 	$('.js-matrix-code').empty();
-				// 	// 	new QRCode($('.js-matrix-code')[0], link);
-
-				// 	// 	$('.js-matrix-link').attr('href', link).text(link);
-
-				// 	// 	$('.js-matrix-share-popup').Popup();
-
-				// 	// 	return false;
-				// 	// });
-				// 	// Копирование ссылки
-
-				// 	$('.js-matrix-share-popup').on(
-				// 		'click',
-				// 		'.js-matrix-copy-link',
-				// 		function () {
-				// 			const el = document.createElement('textarea');
-				// 			el.value = $('.js-matrix-link').attr('href');
-				// 			el.setAttribute('readonly', '');
-				// 			el.style.position = 'absolute';
-				// 			el.style.left = '0';
-				// 			el.style.textTransform = 'lowercase';
-				// 			document.body.appendChild(el);
-				// 			el.select();
-				// 			document.execCommand('copy');
-				// 			document.body.removeChild(el);
-
-				// 			$(this).text('Скопировано').addClass('simple very');
-
-				// 			return false;
-				// 		}
-				// 	);
-				// });
-
-				let date = $('.js-matrix-birthdate').val();
-				if (date) {
-					calculate_matrix(
-						$('.forPromocode__matrix'),
-						date,
-						function () {
-							// let url_permalink = 'https://nenumerolog.ru/decryption/?';
-							// let url_permalink = '';
-							// let url_base =
-							// 	'ch_sud=' +
-							// 	$('.n-destiny').text() +
-							// 	'&date=' +
-							// 	date +
-							// 	'&harakter=' +
-							// 	$('.n-0').text() +
-							// 	'&zdorvie=' +
-							// 	$('.n-3').text() +
-							// 	'&udacha=' +
-							// 	$('.n-6').text() +
-							// 	'&energiya=' +
-							// 	$('.n-1').text() +
-							// 	'&logika=' +
-							// 	$('.n-4').text() +
-							// 	'&dolg=' +
-							// 	$('.n-7').text() +
-							// 	'&interes=' +
-							// 	$('.n-2').text() +
-							// 	'&trud=' +
-							// 	$('.n-5').text() +
-							// 	'&pamat=' +
-							// 	$('.n-8').text() +
-							// 	'&temperament=' +
-							// 	$('.n-9').text() +
-							// 	'&cel=' +
-							// 	$('.n-12').text() +
-							// 	'&semiya=' +
-							// 	$('.n-11').text() +
-							// 	'&privichki=' +
-							// 	$('.n-13').text() +
-							// 	'&bit=' +
-							// 	$('.n-10').text() +
-							// 	'&additional=' +
-							// 	encodeURIComponent($('.n-additional').text());
-
-							// let url = url_permalink + url_base;
-							// let url_pdf = '/wp-content/themes/fluxury/pdf/?' + url_base;
-
-							// console.log(url);
-							// console.log(url_pdf);
-
-							// document.url_pdf = url_pdf;
-
-							// $.ajax({
-							// 	type: 'GET',
-							// 	url: url,
-							// 	dataType: 'html',
-							// 	success: function (data) {
-							// 		$('.decrypt__left').append(data);
-							// 	},
-							// });
-						},
-						true
-					);
-				}
 			});
 		</script>
 		
-		<script
-			type="text/javascript"
-			src="https://nenumerolog.ru/wp-content/themes/fluxury/assets/js/matrix_new_anti_cash_01.js?ver=1.0.344"
-			id="matrix-js"></script>
-		
-		
 		<script>
-			document.head.innerHTML += '<meta property="og:title" content="Расшифровка матрицы">'
+			function clearDate() {
+				(date = ''),
+					(dateArray = []),
+					(secondNumber = []),
+					(matrix = []),
+					console.log('my ready 123444');
+			}
+
+			function replaceDate() {}
+
+			function clearArray(e) {
+				return (
+					0 == e[0] && e.splice(0, 1),
+					0 == e[1] && e.splice(1, 1),
+					0 == e[2] && e.splice(2, 1),
+					e
+				);
+			}
+
+			function firstSecondNumber(dateArray) {
+				let e = 0;
+				return (
+					dateArray.forEach(function (t, r) {
+						e += parseInt(t, 10);
+					}),
+					e
+				);
+			}
+
+			function secondSecondNumber(e) {
+				let t = 0,
+					r = e.toString().split('');
+				return (
+					r.forEach(function (e, r) {
+						t += parseInt(e, 10);
+					}),
+					t
+				);
+			}
+
+			function thirdSecondNumber(secondNumber, dateArray) {
+				let e = secondNumber[0],
+					t = Math.abs(e - 2 * parseInt(dateArray[0], 10));
+				return t;
+			}
+
+			function toInteger(fullNumbers) {
+				let e = [];
+				return (
+					fullNumbers.forEach(function (t, r) {
+						let a = t.toString(),
+							n = a.split('');
+						n.forEach(function (t, r) {
+							let a = parseInt(t, 10);
+							e = e.concat(a);
+						});
+					}),
+					e
+				);
+			}
+
+			function getMatrix(fullNumbers) {
+				for (var e = [], t = [], r = 1; r <= 9; r++)
+					(e[r - 1] = ''),
+						(t[r - 1] = 0),
+						fullNumbers.forEach(function (a, n) {
+							a == r && ((e[r - 1] += '' + r), t[r - 1]++);
+						}),
+						'' == e[r - 1] && (e[r - 1] = 0);
+				return (
+					(e[9] = t[2] + t[4] + t[6]),
+					(e[10] = t[3] + t[4] + t[5]),
+					(e[11] = t[1] + t[4] + t[7]),
+					(e[12] = t[0] + t[3] + t[6]),
+					(e[13] = t[2] + t[5] + t[8]),
+					e
+				);
+			}
+
+			function destinyNumber(secondNumber_) {
+				let e = 0;
+				e = secondNumber_[1] == 11 ? 11 : secondSecondNumber(secondNumber_[1]);
+				return e;
+			}
+
+			function correct_date(value) {
+				let ppp = value.replace(/[^\d]/g, '');
+				let days = ppp.slice(0, 2);
+				let mm = ppp.slice(2, 4);
+				let yy = ppp.slice(4);
+
+				if (parseInt(days, 10) > 31) days = '31';
+				if (days.length && days[0] > '3')
+					days = ('000' + parseInt(days, 10)).slice(-2);
+
+				if (parseInt(mm, 10) > 12) mm = '12';
+				if (mm.length && mm[0] > '1') mm = ('000' + parseInt(mm, 10)).slice(-2);
+
+				let tt = [];
+				if (days.length) tt.push(days);
+				if (mm.length) tt.push(mm);
+				if (yy.length) tt.push(yy);
+				ppp = tt.join('.');
+				return ppp;
+			}
+
+			function clearArray(e) {
+				return (
+					0 == e[0] && e.splice(0, 1),
+					0 == e[1] && e.splice(1, 1),
+					0 == e[2] && e.splice(2, 1),
+					e
+				);
+			}
+
+			function date_autocorrect(container) {
+				$(container)
+					.mask('00.00.0000')
+					.on('change paste keyup', function (e) {
+						e.preventDefault();
+						$(this).val(correct_date($(this).val()));
+					});
+			}
+
+			function calculate_matrix($container, value, callback, empty) {
+				date = value;
+
+				dateArray = [];
+				secondNumber = [];
+				fullNumbers = [];
+				matrix = [];
+				destiny = 0;
+
+				let e = date.split('.');
+				e.forEach(function (e, t) {
+					let r = e.split('');
+					dateArray = dateArray.concat(r);
+				});
+
+				dateArray = clearArray(dateArray);
+
+				(secondNumber[0] = firstSecondNumber(dateArray)), 
+					(secondNumber[1] = secondSecondNumber(secondNumber[0])), 
+					(secondNumber[2] = thirdSecondNumber(secondNumber, dateArray)),
+					(secondNumber[3] = secondSecondNumber(secondNumber[2]));
+
+				fullNumbers = dateArray.concat(secondNumber);
+				fullNumbers = toInteger(fullNumbers);
+				matrix = getMatrix(fullNumbers);
+				destiny = destinyNumber(secondNumber);
+
+				let ee = secondNumber.join(', ');
+
+				$numbers = $container.find('.number');
+
+				let c = 0;
+				let i = setInterval(function () {
+
+					c++;
+					if (c > 10) {
+						matrix.forEach(function (ee, t) {
+							$container.find('.n-' + t).text(ee || (empty ? '_' : ''));
+						});
+						$container.find('.n-additional').text(ee);
+						$container.find('.n-destiny').text(destiny);
+
+						clearInterval(i);
+
+						if (typeof callback == 'function') {
+							callback();
+
+							
+							let result_matrix_light = '';
+							for (let sch = 0; sch <= 8; sch++) {
+								result_matrix_light += matrix[sch] || '-';
+								result_matrix_light += '/'; 
+							}
+							result_matrix_light += 'Р§РЎ' + destiny;
+							console.log(result_matrix_light);
+							
+							if (
+								$('.div_matrix_light').length &&
+								$('.children_matrix_light').length
+							) {
+								$('.div_matrix_light').fadeIn();
+								$('.children_matrix_light').html(result_matrix_light);
+							}
+						}
+
+						return;
+					}
+
+					$numbers.each(function (i) {
+						let el = $(this);
+						let d = el.data('r');
+
+						if (typeof d != 'undefined') {
+							let c = Math.floor(Math.random() * 4);
+							el.html(c ? d.toString().repeat(c) : empty ? '_' : '&nbsp;');
+						} else {
+							el.html(Math.floor(Math.random() * 8) + 1);
+						}
+					});
+				}, 30);
+			}
+			function calculate_matrix_sovmestimost(
+				$container,
+				$container2,
+				value,
+				value2,
+				callback,
+				empty
+			) {
+				date = value;
+				date2 = value2;
+
+				dateArray = [];
+				secondNumber = [];
+				fullNumbers = [];
+				matrix = [];
+				destiny = 0;
+
+				dateArray2 = [];
+				secondNumber2 = [];
+				fullNumbers2 = [];
+				matrix2 = [];
+				destiny2 = 0;
+
+				let e = date.split('.');
+				e.forEach(function (e, t) {
+					let r = e.split('');
+					dateArray = dateArray.concat(r);
+				});
+
+				let e2 = date2.split('.');
+				e2.forEach(function (e, t) {
+					let r = e.split('');
+					dateArray2 = dateArray2.concat(r);
+				});
+
+				dateArray = clearArray(dateArray);
+				dateArray2 = clearArray(dateArray2);
+
+				(secondNumber[0] = firstSecondNumber(dateArray)),
+					(secondNumber[1] = secondSecondNumber(secondNumber[0])),
+					(secondNumber[2] = thirdSecondNumber(secondNumber, dateArray)),
+					(secondNumber[3] = secondSecondNumber(secondNumber[2]));
+
+				(secondNumber2[0] = firstSecondNumber(dateArray2)),
+					(secondNumber2[1] = secondSecondNumber(secondNumber2[0])),
+					(secondNumber2[2] = thirdSecondNumber(secondNumber2, dateArray2)),
+					(secondNumber2[3] = secondSecondNumber(secondNumber2[2]));
+
+				fullNumbers = dateArray.concat(secondNumber);
+				fullNumbers = toInteger(fullNumbers);
+				matrix = getMatrix(fullNumbers);
+				destiny = destinyNumber(secondNumber);
+
+				fullNumbers2 = dateArray2.concat(secondNumber2);
+				fullNumbers2 = toInteger(fullNumbers2);
+				matrix2 = getMatrix(fullNumbers2);
+				destiny2 = destinyNumber(secondNumber2);
+
+				let ee = secondNumber.join(', ');
+				$numbers = $container.find('.number');
+
+				let ee2 = secondNumber2.join(', ');
+				$numbers2 = $container2.find('.number');
+
+
+				let c = 0;
+				let i = setInterval(function () {
+					c++;
+					if (c > 10) {
+						matrix.forEach(function (ee, t) {
+							$container.find('.n-' + t).text(ee || (empty ? '_' : ''));
+						});
+						matrix2.forEach(function (ee, t) {
+							$container2.find('.n-' + t).text(ee || (empty ? '_' : ''));
+						});
+
+						$container.find('.n-additional').text(ee);
+						$container.find('.n-destiny').text(destiny);
+
+						$container2.find('.n-additional').text(ee2);
+						$container2.find('.n-destiny').text(destiny2);
+
+						//console.log('destiny='+destiny);
+						//console.log('destiny2='+destiny2);
+
+						clearInterval(i);
+
+						if (typeof callback == 'function') callback();
+
+						return;
+					}
+
+					$numbers.each(function (i) {
+						let el = $(this);
+						let d = el.data('r');
+
+						if (typeof d != 'undefined') {
+							let c = Math.floor(Math.random() * 4);
+							el.html(c ? d.toString().repeat(c) : empty ? '_' : '&nbsp;');
+						} else {
+							el.html(Math.floor(Math.random() * 8) + 1);
+						}
+					});
+					$numbers2.each(function (i) {
+						let el = $(this);
+						let d = el.data('r');
+
+						if (typeof d != 'undefined') {
+							let c = Math.floor(Math.random() * 4);
+							el.html(c ? d.toString().repeat(c) : empty ? '_' : '&nbsp;');
+						} else {
+							el.html(Math.floor(Math.random() * 8) + 1);
+						}
+					});
+				}, 30);
+			}
 		</script>
 	</body>
 </html>
